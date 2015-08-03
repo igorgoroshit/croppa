@@ -45,10 +45,10 @@ class Handler extends Controller {
 	public function handle($request) {
 
 		// Validate the signing token
-		if (($token = $this->url->signingToken($request))
-			&& $token != $this->request->input('token')) {
-			throw new NotFoundHttpException('Token missmatch');
-		}
+		// if (($token = $this->url->signingToken($request))
+		// 	&& $token != $this->request->input('token')) {
+		// 	throw new NotFoundHttpException('Token missmatch');
+		// }
 
 		// Get crop path relative to it's dir
 		$crop_path = $this->url->relativePath($request);
